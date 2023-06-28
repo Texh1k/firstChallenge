@@ -1,9 +1,13 @@
 <?php
-$login = $_POST['login'];
-$email = $_POST['email'];
-$password = $_POST ['password'];
-if (strlen($login) < 5 || strlen($login) > 90) {
-    echo 'Недопустимая длина';
-    exit();
+
+$servername = "localhost";
+$database = "users";
+$username = "root";
+$password = "";
+$mysql = mysqli_connect($servername, $username, $password, $database);
+if (!$mysql) {
+    die("Не удалось подключиться: " . mysqli_connect_error());
 }
+mysqli_query($mysql,"SET NAMES utf8");
+
 ?>
