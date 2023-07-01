@@ -1,4 +1,6 @@
-
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -14,12 +16,11 @@
 <body>
 <div class = "container mt-5">
     <h1>Форма регистрации</h1><br>
-    <form action="check.php" method = "post" enctype="multipart/form-data" >
+    <form action="signup.php" method = "post" enctype="multipart/form-data" >
         <input type = "text" class = "form-control" name = "login" id = "login" placeholder = "Введите логин"><br>
         <input type = "text" class = "form-control" name = "email" id = "email" placeholder = "Введите вашу почту"><br>
         <input type = "password" class = "form-control" name = "password" id = "password" placeholder = "Введите пароль"><br>
-        <input type = "password" class = "form-control" name = "password_confirm" id = "password" placeholder = "Введите пароль"><br>
-        <input type = "file" class = "form-control" name = "avatar" id = "avatar" placeholder = "Добавьте изображение"><br>
+        <input type = "password" class = "form-control" name = "password_confirm" id = "password_confirm" placeholder = "Подтвердите пароль"><br>
         <button class = "btn btn-outline-danger" type = "submit">Регистрация</button>
     </form>
 </body>
