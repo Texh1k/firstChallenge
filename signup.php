@@ -1,14 +1,15 @@
 <?php
-session_start();
-require_once 'DataBaseConnect.php';
-$login = filter_var(trim($_POST['login']));
-$email = filter_var(trim($_POST['email']));
-$password = filter_var(trim($_POST['password']));
-$password_confirm = filter_var(trim($_POST['password_confirm']));
-if ($password === $password_confirm) {
-    $password = md5($password);
-    mysqli_query($mysql,"INSERT INTO `users` (`email`, `login`, `password`) VALUES ('$email', '$login', '$password')");
-    header ('Location: html/index.php');
-} else {
-    die("Не удалось подключиться: не совпадают пароли. " . mysqli_connect_error());
+$servername = "localhost";
+$database = "users";
+$username = "root";
+$pass = "";
+$mysql = mysqli_connect($servername, $username, $pass, $database);
+if (!$mysql) {
+    die("Не удалось подключиться " . mysqli_connect_error());
 }
+
+$login = filter_var($_POST['login']);
+$email = filter_var($_POST['email']);
+$password = filter_var($_POST['password']);
+    $password = md5($password);
+    $query = $mysql->query("INSERT INTO `users` (`email`, `login`, `password`) VALUES ('$email', '$login', '$password')");

@@ -11,12 +11,12 @@
 </head>
 
 <body>
-<div class = "container mt-5">
+<div class = "container mt-4">
 <h1>Форма авторизации</h1>
-    <form action="" method = "post">
+    <form action="authorization.php" method = "post">
         <input type = "text" class = "form-control" name = "email" id = "email" placeholder="Введите почту"><br>
         <input type = "text" class = "form-control" name = "login" id = "login" placeholder="Введите логин"><br>
-        <input type = "password" class = "form-control" name = "password" id = "password" placeholder="Введите пароль"><br>
+        <input type = "password" class = "form-control" name = "password" id = "login" placeholder="Введите пароль"><br>
         <button class = "btn btn-success" type = "submit">Авторизоваться</button>
         <p><br>
             Нет аккаунта ? -<a href = "/register.php"> Регистрация</a>
