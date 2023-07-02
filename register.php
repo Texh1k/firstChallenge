@@ -22,6 +22,7 @@ session_start();
         <input type = "password" class = "form-control" name = "password" id = "password" placeholder = "Введите пароль"><br>
         <input type = "password" class = "form-control" name = "password_confirm" id = "password_confirm" placeholder = "Подтвердите пароль"><br>
         <button class = "btn btn-outline-danger" type = "submit">Регистрация</button>
+
     </form>
 </body>
 
