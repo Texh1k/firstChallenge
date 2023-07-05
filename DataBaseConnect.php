@@ -9,6 +9,3 @@ $mysql = mysqli_connect($servername, $username, $password, $database);
 if (!$mysql) {
     die("Не удалось подключиться: " . mysqli_connect_error());
 }
-
-
-?>
