@@ -12,3 +12,4 @@ $email = filter_var($_POST['email']);
 $password = filter_var($_POST['password']);
 $password = md5($password);
 $query = $mysql->query("INSERT INTO `users` (`email`, `login`, `password`) VALUES ('$email', '$login', '$password')");
+header('Location: /html');
